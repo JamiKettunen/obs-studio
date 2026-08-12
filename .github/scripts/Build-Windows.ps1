@@ -49,7 +49,7 @@ function Build {
     Push-Location -Stack BuildTemp
     Ensure-Location $ProjectRoot
 
-    $CmakeArgs = @('--preset', "windows-ci-${Target}")
+    $CmakeArgs = @('--preset', "windows-ci-${Target}", "-DOBS_VERSION_OVERRIDE=32.2.1")
 
     $CmakeBuildArgs = @('--build')
     $CmakeInstallArgs = @()
